@@ -1,5 +1,7 @@
 package Seminar2;
 
+import Seminar2.Characters.BaseUnit;
+
 import java.util.ArrayList;
 
 public class QuickSort {
@@ -11,7 +13,7 @@ public class QuickSort {
             ArrayList<BaseUnit> right = new ArrayList<>();
             ArrayList<BaseUnit> left = new ArrayList<>();
             for (int i = 1; i < list.size(); i++) {
-                if (list.get(i).maxHealth - list.get(i).health > pivot.health) right.add(list.get(i));
+                if (list.get(i).getMaxHealth() - list.get(i).getHealth() > pivot.getHealth()) right.add(list.get(i));
                 else left.add(list.get(i));
             }
             ArrayList<BaseUnit> tempResult = new ArrayList<>(quickSort(left));
