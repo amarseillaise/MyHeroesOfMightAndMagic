@@ -30,13 +30,22 @@ public class Visual {
         for (int i = 0; i < Main.GANG_SIZE; i++) {
 
             if (Main.lightGang.get(i).getPosition().isEqual(posit)) {
-                str = "|" + AnsiColors.ANSI_BLUE + Main.lightGang.get(i).getName().toUpperCase().charAt(0) + AnsiColors.ANSI_RESET;
-                unitInfo.add("| " + AnsiColors.ANSI_BLUE + Main.lightGang.get(i).getInfo() + AnsiColors.ANSI_RESET + " ");
+                if (Main.lightGang.get(i).getStatus().equals("Dead")) {
+                    str = "|" + Main.lightGang.get(i).getName().toUpperCase().charAt(0);
+                } else {
+                    str = "|" + AnsiColors.ANSI_BLUE + Main.lightGang.get(i).getName().toUpperCase().charAt(0) + AnsiColors.ANSI_RESET;
+                    unitInfo.add("| " + AnsiColors.ANSI_BLUE + Main.lightGang.get(i).getInfo() + AnsiColors.ANSI_RESET + " ");
+                }
             }
 
             if (Main.darkGang.get(i).getPosition().isEqual(posit)) {
-                str = "|" + AnsiColors.ANSI_RED + Main.darkGang.get(i).getName().toUpperCase().charAt(0) + AnsiColors.ANSI_RESET;
-                unitInfo.add("| " + AnsiColors.ANSI_RED + Main.darkGang.get(i).getInfo() + AnsiColors.ANSI_RESET + " ");
+                if (Main.darkGang.get(i).getStatus().equals("Dead")){
+                    str = "|" + Main.darkGang.get(i).getName().toUpperCase().charAt(0);
+                }
+                else {
+                    str = "|" + AnsiColors.ANSI_RED + Main.darkGang.get(i).getName().toUpperCase().charAt(0) + AnsiColors.ANSI_RESET;
+                    unitInfo.add("| " + AnsiColors.ANSI_RED + Main.darkGang.get(i).getInfo() + AnsiColors.ANSI_RESET + " ");
+                }
             }
         }
         return str;

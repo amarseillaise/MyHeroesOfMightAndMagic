@@ -6,10 +6,11 @@ import java.util.ArrayList;
 
 public class Spearman extends BaseUnit {
 
-    public Spearman(ArrayList<BaseUnit> gangSide, int x, int y){
-        super("Spearman", 4, 5, new int[]{1, 3}, 10, 4, false, false);
+    public Spearman(ArrayList<BaseUnit> gangSide, ArrayList<BaseUnit> enemyGangSide, int x, int y){
+        super("Spearman", 4, 5, new int[]{1, 3}, 10, 4);
         super.position = new Coordinate(x, y);
         super.gangSide = gangSide;
+        super.enemyGangSide = enemyGangSide;
 
     }
 }

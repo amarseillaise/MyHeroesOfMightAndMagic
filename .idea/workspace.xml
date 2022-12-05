@@ -4,24 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0278067b-da3e-4147-a74b-f38bb87bf326" name="Changes" comment="Home work of Seminar 2 done">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Seminar2/AnsiColors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Monk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Wizard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Coordinate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Visual.java" afterDir="false" />
+    <list default="true" id="0278067b-da3e-4147-a74b-f38bb87bf326" name="Changes" comment="Home work of Seminar 3 done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/BaseIUUnitInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/BaseIUUnitInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/BaseUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/BaseUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/CrossBowMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/CrossBowMan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/BaseIUUnitInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/BaseIUUnitInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/BaseUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/BaseUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/CrossBowMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/CrossBowMan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Monk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Peasant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Robber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Robber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Sniper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Spearman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Wizard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Coordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Coordinate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Monk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Peaceant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Peasant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/QuickSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Robber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Robber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Sniper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Spearman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Wizard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Visual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Visual.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669321217646</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Home work of Seminar 3 done">
+      <created>1669669712418</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669669712418</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,6 +136,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Home work of Seminar 2 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Home work of Seminar 2 done" />
+    <MESSAGE value="Home work of Seminar 3 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Home work of Seminar 3 done" />
   </component>
 </project>

@@ -4,28 +4,16 @@ public class Coordinate {
 
     public int x, y;
 
-    public Coordinate(int x, int y){
+    public Coordinate(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public int getX() {
-        return x;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    public boolean isEqual(Coordinate opposite){
+    public boolean isEqual(Coordinate opposite) {
         return x == opposite.x && y == opposite.y;
+    }
+
+    public double getDist(Coordinate opposite) {
+        return Math.sqrt(Math.pow(opposite.x - this.x, 2) + Math.pow(opposite.y - this.y, 2));
     }
 }

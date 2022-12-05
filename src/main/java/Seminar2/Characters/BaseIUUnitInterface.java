@@ -4,6 +4,6 @@ import java.util.ArrayList;
 
 public interface BaseIUUnitInterface {
 
-    void step(ArrayList<BaseUnit> gang);
+    void step();
     String getInfo();
 }
