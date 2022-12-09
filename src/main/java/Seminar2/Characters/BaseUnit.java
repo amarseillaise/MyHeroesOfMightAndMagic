@@ -16,6 +16,8 @@ abstract public class BaseUnit implements BaseIUUnitInterface {
     protected ArrayList<BaseUnit> enemyGangSide;
     protected Coordinate position;
     protected String status;
+    protected static int unitCount = 1;
+    protected int id;
 
     public BaseUnit(String name, int attack, int defence, int[] damage, float health, int speed) {
         this.attack = attack;
@@ -26,6 +28,8 @@ abstract public class BaseUnit implements BaseIUUnitInterface {
         this.speed = speed;
         this.name = name;
         this.status = "Stand";
+        id = unitCount++;
+
     }
 
     public float getMaxHealth() {
@@ -52,6 +56,10 @@ abstract public class BaseUnit implements BaseIUUnitInterface {
         return speed;
     }
 
+    public int getId() {
+        return id;
+    }
+
     protected float calcDamage(BaseUnit unit){
         if (unit.defence - this.attack == 0) return this.damage[0] + this.damage[1] / 2.0f;
         if (unit.defence - this.attack > 0) return this.damage[0];
@@ -74,6 +82,7 @@ abstract public class BaseUnit implements BaseIUUnitInterface {
                 " Dmg: " + (damage[0] + damage[1]) / 2 +
                 " Hlt: " + health +
                 " Sp: " + speed +
+                " ID: " + id +
                 " Sts: " + status;
     }
 

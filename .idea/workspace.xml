@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0278067b-da3e-4147-a74b-f38bb87bf326" name="Changes" comment="Home work of Seminar 3 done">
+    <list default="true" id="0278067b-da3e-4147-a74b-f38bb87bf326" name="Changes" comment="Home work of Seminar 4 done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/BaseIUUnitInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/BaseIUUnitInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/BaseUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/BaseUnit.java" afterDir="false" />
@@ -17,7 +17,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Characters/Wizard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Coordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Coordinate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/Visual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/Visual.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Seminar2/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Seminar2/QuickSort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,5 +138,21 @@
     <MESSAGE value="Home work of Seminar 2 done" />
     <MESSAGE value="Home work of Seminar 3 done" />
     <option name="LAST_COMMIT_MESSAGE" value="Home work of Seminar 3 done" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Seminar2/Coordinate.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Seminar2/Main.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

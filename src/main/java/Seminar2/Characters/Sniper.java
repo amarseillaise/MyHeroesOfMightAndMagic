@@ -10,10 +10,10 @@ public class Sniper extends BaseUnit {
 
     public Sniper(ArrayList<BaseUnit> gangSide, ArrayList<BaseUnit> enemyGangSide, int x, int y){
         super("Sniper", 12, 10, new int[]{8, 10}, 15, 9);
-        shots = 32;
+        this.shots = 32;
         super.position = new Coordinate(x, y);
-        super.gangSide = gangSide;
-        super.enemyGangSide = enemyGangSide;
+        this.gangSide = gangSide;
+        this.enemyGangSide = enemyGangSide;
     }
 
     @Override
@@ -25,6 +25,7 @@ public class Sniper extends BaseUnit {
                 " Hlt: " + health +
                 " Sp: " + speed +
                 " Sht: " + shots +
+                " ID: " + id +
                 " Sts: " + status;
     }
 
@@ -35,7 +36,7 @@ public class Sniper extends BaseUnit {
             ) {
                 if (u.name.equals("Peasant") && u.status.equals("Stand")) {
                     this.shots++;
-                    u.status = "Busy";
+                    u.status = "Supplied " + this.id;
                     break;
                 }
             }
@@ -53,9 +54,10 @@ public class Sniper extends BaseUnit {
                 }
                 if (index > -1) {
                     this.hitDamage(enemyGangSide.get(index), this.speed > minDist ? calcDamage(enemyGangSide.get(index)) : calcDamage(enemyGangSide.get(index / 2)));
-                    this.status = "Shooting";
+                    this.status = "Shooting to " + enemyGangSide.get(index).id;
                     this.shots--;
                 }
+                else this.status = "No target";
             }
         }
     }

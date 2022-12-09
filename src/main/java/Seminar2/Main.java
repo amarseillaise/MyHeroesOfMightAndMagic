@@ -32,8 +32,8 @@ public class Main {
         for (int i = 0; i < GANG_SIZE; i++) {
             int index = new Random().nextInt(4);
             switch (index){
-                case 0 -> lightGang.add(new Spearman(lightGang, darkGang, x, y++));
-                case 1 -> lightGang.add(new CrossBowMan(lightGang, darkGang, x, y++));
+                case 0, 1 -> lightGang.add(new Spearman(lightGang, darkGang, x, y++));
+                //case 1 -> lightGang.add(new CrossBowMan(lightGang, darkGang, x, y++));
                 case 2 -> lightGang.add(new Monk(lightGang, darkGang, x, y++));
                 default -> lightGang.add(new Peasant(lightGang, darkGang, x, y++));
             }
@@ -44,8 +44,8 @@ public class Main {
         for (int j = 0; j < GANG_SIZE; j++) {
             int index = new Random().nextInt(4);
             switch (index){
-                case 0 -> darkGang.add(new Robber(darkGang, lightGang, x, y++));
-                case 1 -> darkGang.add(new Sniper(darkGang, lightGang, x, y++));
+                case 0, 1 -> darkGang.add(new Robber(darkGang, lightGang, x, y++));
+                //case 1 -> darkGang.add(new Sniper(darkGang, lightGang, x, y++));
                 case 2 -> darkGang.add(new Wizard(darkGang, lightGang, x, y++));
                 default -> darkGang.add(new Peasant(darkGang, lightGang, x, y++));
             }
