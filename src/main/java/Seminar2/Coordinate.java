@@ -1,9 +1,8 @@
 package Seminar2;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import Seminar2.Characters.BaseUnit;
+
+import java.util.*;
 
 public class Coordinate {
 
@@ -19,20 +18,28 @@ public class Coordinate {
     }
 
     public boolean isNear(Coordinate target) {
-        Set<Integer> nearXY = new HashSet<>();
-        nearXY.add(1);
-        nearXY.add(-1);
-        return ((nearXY.contains(this.x - target.x) | nearXY.contains(this.y - target.y)) &
-                !((nearXY.contains(this.x - target.x) & nearXY.contains(this.y - target.y))));
+        int distX = Math.abs(this.x - target.x);
+        int distY = Math.abs(this.y - target.y);
+
+        return (distX < 2 && distY < 2) && !(distX == 1 & distY == 1);
     }
 
-    public void goAhead(Coordinate target){
+    public boolean isOccupied(ArrayList<BaseUnit> UnitsPositions) {
+        for (BaseUnit xy : UnitsPositions) {
+            if (this.equals(xy.getPosition())) return true;
+        }
+        return false;
+    }
+
+    public void goAhead(Coordinate target, ArrayList<BaseUnit> UnitsPositions){
         int distX = this.x - target.x;
         int distY = this.y - target.y;
 
         if (Math.abs(distX) > Math.abs(distY)){
-            if (distX < 0) this.x++;
-            else this.x--;
+            if (distX < 0) {
+                if(isOccupied(UnitsPositions))
+            }
+
         }
         else {
             if (distY < 0) this.y++;
