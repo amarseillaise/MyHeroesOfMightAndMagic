@@ -13,6 +13,13 @@ public class Coordinate {
         this.y = y;
     }
 
+    private Coordinate coordinateOffSet (int x, int y) {
+        Coordinate coordinateIn = this;
+        coordinateIn.x += x;
+        coordinateIn.y += y;
+        return coordinateIn;
+    }
+
     public boolean isEqual(Coordinate opposite) {
         return x == opposite.x && y == opposite.y;
     }
@@ -24,11 +31,11 @@ public class Coordinate {
         return (distX < 2 && distY < 2) && !(distX == 1 & distY == 1);
     }
 
-    public boolean isOccupied(ArrayList<BaseUnit> UnitsPositions) {
+    public boolean isFree(Coordinate ghostUnitXY,ArrayList<BaseUnit> UnitsPositions) {
         for (BaseUnit xy : UnitsPositions) {
-            if (this.equals(xy.getPosition())) return true;
+            if (ghostUnitXY.isEqual(xy.getPosition())) return false;
         }
-        return false;
+        return true;
     }
 
     public void goAhead(Coordinate target, ArrayList<BaseUnit> UnitsPositions){
@@ -37,13 +44,28 @@ public class Coordinate {
 
         if (Math.abs(distX) > Math.abs(distY)){
             if (distX < 0) {
-                if(isOccupied(UnitsPositions))
+                if (isFree(this.coordinateOffSet(1, 0), UnitsPositions)) this.x++;
+                else if (isFree(this.coordinateOffSet(0, 1), UnitsPositions)) this.y++;
+                else if (isFree(this.coordinateOffSet(0, -1), UnitsPositions)) this.y--;
             }
-
+            else {
+                if (isFree(this.coordinateOffSet(-1, 0), UnitsPositions)) this.x--;
+                else if (isFree(this.coordinateOffSet(0, -1), UnitsPositions)) this.y--;
+                else if (isFree(this.coordinateOffSet(0, 1), UnitsPositions)) this.y++;
+            }
         }
+
         else {
-            if (distY < 0) this.y++;
-            else this.y--;
+            if (distY < 0) {
+                if (isFree(this.coordinateOffSet(0, 1), UnitsPositions)) this.y++;
+                else if (isFree(this.coordinateOffSet(1, 0), UnitsPositions)) this.x++;
+                else if (isFree(this.coordinateOffSet(-1, 0), UnitsPositions)) this.x--;
+            }
+            else {
+                if (isFree(this.coordinateOffSet(0, -1), UnitsPositions)) this.y--;
+                else if (isFree(this.coordinateOffSet(-1, 0), UnitsPositions)) this.x--;
+                else if (isFree(this.coordinateOffSet(1, 0), UnitsPositions)) this.x++;
+            }
         }
     }
 

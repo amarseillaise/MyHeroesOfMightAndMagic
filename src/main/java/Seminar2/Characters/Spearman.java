@@ -35,7 +35,7 @@ public class Spearman extends BaseUnit {
                     this.status = "Attacking " + target.id;
                 }
                 else {
-                    this.position.goAhead(target.position);
+                    this.position.goAhead(target.position, this.gangSide);
                     this.status = "Going to " + target.id;
                 }
             }
