@@ -14,7 +14,7 @@ public class Coordinate {
     }
 
     private Coordinate coordinateOffSet (int x, int y) {
-        Coordinate coordinateIn = this;
+        Coordinate coordinateIn = new Coordinate(this.x, this.y);
         coordinateIn.x += x;
         coordinateIn.y += y;
         return coordinateIn;
