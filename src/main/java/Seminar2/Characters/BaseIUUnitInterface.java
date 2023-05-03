@@ -1,4 +1,4 @@
-package Seminar2;
+package Seminar2.Characters;
 
 public interface BaseIUUnitInterface {
 

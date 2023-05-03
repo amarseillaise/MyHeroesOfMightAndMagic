@@ -1,22 +1,56 @@
 package Seminar2;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import Seminar2.Characters.*;
+
+import javax.swing.plaf.PanelUI;
+import java.util.*;
 
 public class Main {
 
-    public static BaseUnit getRandomUnit(int minIndex, ArrayList<BaseUnit> side){
-        int unit = new Random().nextInt(minIndex,minIndex + 4);
-        return switch(unit) {
-            case 0 -> new Robber();
-            case 1 -> new Sniper();
-            case 2 -> new Wizard(side);
-            case 3 -> new Peaceant();
-            case 4 -> new Spearman();
-            case 5 -> new CrossBowMan();
-            default -> new Monk(side);
-        };
+    public static final int GANG_SIZE = 10;
+    public static ArrayList<BaseUnit> lightGang;
+    public static ArrayList<BaseUnit> darkGang;
+
+    public static void main(String[] args) {
+
+        init();
+        Scanner scanner = new Scanner(System.in);
+
+        while (true){
+            Visual.output();
+            turnMove();
+            scanner.nextLine();
+        }
+    }
+
+    private static void init(){
+        darkGang = new ArrayList<>();
+        lightGang = new ArrayList<>();
+
+        int x = 1;
+        int y = 1;
+        for (int i = 0; i < GANG_SIZE; i++) {
+            int index = new Random().nextInt(4);
+            switch (index){
+                case 0, 1 -> lightGang.add(new Spearman(lightGang, darkGang, x, y++));
+                //case 1 -> lightGang.add(new CrossBowMan(lightGang, darkGang, x, y++));
+                case 2 -> lightGang.add(new Monk(lightGang, darkGang, x, y++));
+                default -> lightGang.add(new Peasant(lightGang, darkGang, x, y++));
+            }
+        }
+
+        x = GANG_SIZE;
+        y = 1;
+        for (int j = 0; j < GANG_SIZE; j++) {
+            int index = new Random().nextInt(4);
+            switch (index){
+                case 0, 1 -> darkGang.add(new Robber(darkGang, lightGang, x, y++));
+                //case 1 -> darkGang.add(new Sniper(darkGang, lightGang, x, y++));
+                case 2 -> darkGang.add(new Wizard(darkGang, lightGang, x, y++));
+                default -> darkGang.add(new Peasant(darkGang, lightGang, x, y++));
+            }
+        }
+
     }
 
     public static void selectTypeUnit(List<BaseUnit> list, String type ){
@@ -24,33 +58,16 @@ public class Main {
             if (unit.toString().split(" ")[0].equals(type)) System.out.println(unit);
         }
     }
-    
-    public static void main(String[] args) {
-        
-    //List<BaseUnit> gang = new ArrayList<>();
-    //while (gang.size()< 50) gang.add(getRandomUnit());
-    //selectTypeUnit(gang, "Robber");
 
-        ArrayList<BaseUnit> lightGang = new ArrayList<>();
-        ArrayList<BaseUnit> darkGang = new ArrayList<>();
-
-        while (lightGang.size() < 10) {
-            lightGang.add(getRandomUnit(3, lightGang));
-            darkGang.add(getRandomUnit(0, darkGang));
-        }
-
-        QuickSort.quickSort(lightGang).forEach(baseUnit -> System.out.println(baseUnit.getInfo()));
-        System.out.println("______________________________________________");
-        QuickSort.quickSort(darkGang).forEach(baseUnit -> System.out.println(baseUnit.getInfo()));
-
-        lightGang.forEach(BaseUnit::step);
-        darkGang.forEach(BaseUnit::step);
-
-        System.out.println("______________________________________________");
-
-        QuickSort.quickSort(lightGang).forEach(baseUnit -> System.out.println(baseUnit.getInfo()));
-        System.out.println("______________________________________________");
-        QuickSort.quickSort(darkGang).forEach(baseUnit -> System.out.println(baseUnit.getInfo()));
-
+    private static void turnMove(){
+        ArrayList<BaseUnit> unionGang = new ArrayList<>(lightGang);
+        unionGang.addAll(darkGang);
+        unionGang.sort(new Comparator<BaseUnit>() {
+            @Override
+            public int compare(BaseUnit o1, BaseUnit o2) {
+                return o2.getSpeed() - o1.getSpeed();
+            }
+        });
+        unionGang.forEach(BaseUnit::step);
     }
 }
